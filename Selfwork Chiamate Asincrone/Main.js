@@ -28,6 +28,10 @@ startButton.addEventListener('click', () => {
         tempoRimanente.innerHTML = ``;
     }
 
+    if (secondiRimanenti != 0) {
+        cnt = secondiRimanenti;
+    }
+
     interval = setInterval( () => {
 
         if (cnt <= 0) {
@@ -48,6 +52,7 @@ startButton.addEventListener('click', () => {
 stopButton.addEventListener('click', () => {
 
     clearInterval(interval);
+    secondiRimanenti = cnt;
     
 });
 
